@@ -16,7 +16,7 @@ Users can securely sign in using **Google OAuth**, manage their bookmarks, and e
 - **Next.js 14** (App Router)
 - **Supabase**
   - Authentication (Google OAuth)
-  - PostgreSQL Database
+  - Database
   - Realtime subscriptions
 - **Tailwind CSS**
 - **TypeScript**
