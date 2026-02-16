@@ -65,14 +65,7 @@ Supabase Realtime is enabled on the `bookmarks` table.
 The app subscribes to `INSERT` and `DELETE` events so changes appear instantly across multiple tabs without refreshing.
 
 ---
-
-## 🧪 How to Run Locally
-
-1. Clone the repository
-```bash
-git clone https://github.com/your-username/smart-bookmark-app.git
-cd smart-bookmark-app
-
+## Problems faced 
 Problems Faced & How I Solved Them
 1️⃣ Realtime Delete Not Syncing Across Tabs
 
@@ -156,3 +149,13 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 
 After setting environment variables, redeploy the project.
+
+
+## 🧪 How to Run Locally
+
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/smart-bookmark-app.git
+cd smart-bookmark-app
+
+
