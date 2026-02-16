@@ -7,7 +7,7 @@ Users can sign in using **Google OAuth**, add and delete bookmarks, and see upda
 
 ## 🚀 Live Demo
 
-🔗 Live URL: [https://your-vercel-app-url.vercel.app](https://smart-bookmark-app-4uuf.vercel.app/login)
+🔗 Live URL: https://smart-bookmark-app-4uuf.vercel.app/login
 
 ---
 
