@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark App
 
-## Getting Started
+A simple real-time bookmark manager built using **Next.js App Router**, **Supabase**, and **Tailwind CSS**.  
+Users can sign in using **Google OAuth**, add and delete bookmarks, and see updates in real time across multiple tabs.
 
-First, run the development server:
+---
 
+## 🚀 Live Demo
+
+🔗 Live URL: https://your-vercel-app-url.vercel.app
+
+---
+
+## 📦 Tech Stack
+
+- **Next.js** (App Router)
+- **Supabase**
+  - Authentication (Google OAuth)
+  - PostgreSQL Database
+  - Realtime subscriptions
+- **Tailwind CSS**
+- **Vercel** (Deployment)
+
+---
+
+## ✨ Features
+
+- Google OAuth login (no email/password)
+- Add bookmarks (URL + title)
+- Bookmarks are private to each user
+- Real-time updates without page refresh
+- Delete own bookmarks
+- Deployed and accessible via live URL
+
+---
+
+## 🗄️ Database Schema
+
+**Table: `bookmarks`**
+
+| Column      | Type      |
+|------------|-----------|
+| id         | uuid (PK) |
+| user_id    | uuid (FK → auth.users.id) |
+| title      | text      |
+| url        | text      |
+| created_at| timestamp |
+
+---
+
+## 🔐 Security (Row Level Security)
+
+Row Level Security (RLS) is enabled to ensure:
+- Users can only read their own bookmarks
+- Users can only insert bookmarks for themselves
+- Users can only delete their own bookmarks
+
+This ensures complete data privacy between users.
+
+---
+
+## ⚡ Realtime Functionality
+
+Supabase Realtime is enabled on the `bookmarks` table.  
+The app subscribes to `INSERT` and `DELETE` events so changes appear instantly across multiple tabs without refreshing.
+
+---
+
+## 🧪 How to Run Locally
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/your-username/smart-bookmark-app.git
+cd smart-bookmark-app
